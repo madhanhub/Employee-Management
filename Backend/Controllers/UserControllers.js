@@ -1,5 +1,6 @@
 const user=require('../Module/User')
 
+
 class UserControllers{
 
     static async new_user(
@@ -16,16 +17,16 @@ class UserControllers{
         }
     }
 
-    static async user_login(
-        {email,password}
-    ){
+    static async user_login({
+        email,password
+    }){
         try{
             const user_login=await user.findOne({
                 email,password
-        })
-        return user_login
+            })
+            return user_login
         }catch(error){
-            throw Error
+            throw new Error(error)
         }
     }
 

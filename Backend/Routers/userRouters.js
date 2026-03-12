@@ -4,6 +4,7 @@ const usercontrollers=require('../Controllers/UserControllers')
 const authorization=require('../Middleware/auth')
 const jsonwebtoken=require('jsonwebtoken')
 
+
 app.post('/new/user',async(req,res)=>{
     try{
         const{name,email,password}=req.body
@@ -19,10 +20,13 @@ app.post('/new/user',async(req,res)=>{
 app.post('/user/login',async(req,res)=>{
     try{
         const {email,password}=req.body
+
         const user_login=await usercontrollers.user_login({email,password})
+        
+
          if(user_login){
             {
-                user_token=await jsonwebtoken.sign({id:user_login.id,name:user_login.name,email:user_login.email},process.env.SECRET)
+                const user_token=await jsonwebtoken.sign({id:user_login.id,name:user_login.name,email:user_login.email},process.env.SECRET)
                  res.setHeader('user_token',user_token)
                 res.setHeader('id',user_login.id)
                 res.setHeader('name',user_login.name)
@@ -36,6 +40,8 @@ app.post('/user/login',async(req,res)=>{
     res.status(500).json({message:'User login failed '})
 }
 })
+
+
 
 app.get('/get/user',authorization,async(req,res)=>{
     try{
