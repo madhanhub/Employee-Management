@@ -37,26 +37,16 @@ class EmployeeControllers{
             }
         }
        
-    //     static async employee_delete({UserId}){
-    //     try{
-    //         const employee_delete=await employee.findOneAndDelete({createdBy:UserId})
-    //         return employee_delete
-    //     }catch(error){
-    //         throw Error
-    //     }
-    // }
-
-     static async employee_delete({UserId}){
+        static async employee_delete({UserId}){
         try{
-            const employee_delete=await employee.findOneAndDelete({
-                createdBy:new monngose.Type.ObjectId(UserId)
-            })
+            const employee_delete=await employee.findOneAndDelete({createdBy:UserId})
             return employee_delete
         }catch(error){
             throw Error
         }
     }
 
+    
 
 }
 
