@@ -42,7 +42,7 @@ app.put('/update/employee',authorization,async(req,res)=>{
     try{
         const UserId=req.id
         const {name,email,department,salary}=req.body
-        const update_employee=await employecontrollers.employee_update({createdBy:UserId},{
+        const update_employee=await employecontrollers.employee_update({createBy:UserId},{
             name,email,department,salary
         })
         res.status(200).json({message:'Employee Updated',data:update_employee})

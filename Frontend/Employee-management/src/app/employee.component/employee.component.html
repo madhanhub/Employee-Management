@@ -1,4 +1,4 @@
-<p>employee.component works!</p>
+
 
 <h2>Add Employee</h2>
 
@@ -8,6 +8,9 @@
 <input placeholder="Salary" [(ngModel)]="employee.salary"><br>
 
 <button (click)="addEmployee()">Add</button>
+<button (click)="updateEmployee()">Update</button>
+
+
 
 <hr>
 
@@ -22,11 +25,23 @@
 <th>Salary</th>
 </tr>
 
+
+
+
+
 <tr *ngFor="let e of list">
+
 <td>{{e.name}}</td>
 <td>{{e.email}}</td>
 <td>{{e.department}}</td>
 <td>{{e.salary}}</td>
+
+<td>
+<button (click)="deleteEmployee()">Delete</button>
+<button (click)="editEmployee(e)">Edit</button>
+</td>
+
 </tr>
+
 
 </table>

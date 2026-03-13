@@ -56,14 +56,21 @@ if(!token){
     return this.http.get(this.baseUrl+'/get/employee',this.getHeaders());
   }
 
-  // UPDATE
-  updateEmployee(data:any){
-    return this.http.put(this.baseUrl+'/update/employee',data,this.getHeaders());
-  }
-
-  // DELETE
+  //delete
   deleteEmployee(){
-    return this.http.delete(this.baseUrl+'/delete/employee',this.getHeaders());
-  }
+  return this.http.delete(
+    this.baseUrl + '/delete/employee',
+    this.getHeaders()
+  )
+}
+
+//update
+updateEmployee(id:any,data:any){
+  return this.http.put(
+    this.baseUrl + '/update/employee/' ,
+    this.getHeaders()
+  )
+}
+
 
 }

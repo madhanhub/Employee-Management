@@ -33,4 +33,34 @@ export class EmployeeComponent implements OnInit{
     })
   }
 
+  //delete
+
+  deleteEmployee(){
+  this.api.deleteEmployee().subscribe((res:any)=>{
+    alert("Employee Deleted")
+    this.getEmployee()
+  })
+}
+
+//update
+
+editEmployee(emp:any){
+  this.employee = {...emp}
+}
+
+updateEmployee(){
+  this.api.updateEmployee(this.employee._id,this.employee)
+  .subscribe((res:any)=>{
+    alert("Employee Updated")
+    this.employee={}
+    this.getEmployee()
+  })
+}
+
+
+
+
+
+
+
 }

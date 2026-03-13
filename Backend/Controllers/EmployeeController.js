@@ -16,7 +16,7 @@ class EmployeeControllers{
 
     static async employee_list({UserId}){
         try{
-            const employee_list=await employee.findOneAndDelete({UserId})
+            const employee_list=await employee.find({createBy:UserId})
             return employee_list
         }catch(error){
             throw Error
@@ -27,7 +27,8 @@ class EmployeeControllers{
         {UserId},{name,email,department,salary}){
 
             try{
-                const employee_update=await employee.findOneAndUpdate({UserId},
+
+                const employee_update=await employee.findOneAndUpdate({createdBy:UserId},
                     {$set:{name,email,department,salary}},{new:true}
                 )
                 return employee_update
@@ -36,9 +37,20 @@ class EmployeeControllers{
             }
         }
        
-        static async employee_delete({createdBy:UserId}){
+    //     static async employee_delete({UserId}){
+    //     try{
+    //         const employee_delete=await employee.findOneAndDelete({createdBy:UserId})
+    //         return employee_delete
+    //     }catch(error){
+    //         throw Error
+    //     }
+    // }
+
+     static async employee_delete({UserId}){
         try{
-            const employee_delete=await employee.findOneAndDelete({UserId})
+            const employee_delete=await employee.findOneAndDelete({
+                createdBy:new monngose.Type.ObjectId(UserId)
+            })
             return employee_delete
         }catch(error){
             throw Error
