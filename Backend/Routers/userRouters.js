@@ -31,6 +31,8 @@ app.post('/user/login',async(req,res)=>{
                 res.setHeader('id',user_login.id)
                 res.setHeader('name',user_login.name)
                 res.setHeader('email',user_login.email)
+                console.log(user_token);
+                
 
                 res.status(200).json({message:'user Login Successfully',user_token,data:user_login})
             }

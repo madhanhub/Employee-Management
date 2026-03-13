@@ -1,0 +1,32 @@
+<p>employee.component works!</p>
+
+<h2>Add Employee</h2>
+
+<input placeholder="Name" [(ngModel)]="employee.name"><br>
+<input placeholder="Email" [(ngModel)]="employee.email"><br>
+<input placeholder="Department" [(ngModel)]="employee.department"><br>
+<input placeholder="Salary" [(ngModel)]="employee.salary"><br>
+
+<button (click)="addEmployee()">Add</button>
+
+<hr>
+
+<h2>Employee List</h2>
+
+<table border="1">
+
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Department</th>
+<th>Salary</th>
+</tr>
+
+<tr *ngFor="let e of list">
+<td>{{e.name}}</td>
+<td>{{e.email}}</td>
+<td>{{e.department}}</td>
+<td>{{e.salary}}</td>
+</tr>
+
+</table>

@@ -5,28 +5,20 @@ const bodyparser=require('body-parser')
 require('dotenv').config()
 
 
-
-
-
 const userRouters=require('./Routers/userRouters')
 const employeeRouters=require('./Routers/employeeRouters')
-
-
 const cors=require('./Middleware/cors')
-
 
 
 const connectDB=require('./config/DB')
 connectDB()
+
 
 app.use(express.json())
 app.use(bodyparser.json())
 app.use(express.urlencoded({extended:true}))
 app.use(morgan('dev'))
 app.use(cors)
-
-
-
 
 
 app.post('/new/user',userRouters)
