@@ -1,9 +1,28 @@
-<p>login.component works!</p>
-<h2>Login</h2>
+<div class="login-page">
 
-<input placeholder="Email" [(ngModel)]="user.email"><br>
-<input placeholder="Password" [(ngModel)]="user.password"><br>
+  <div class="login-card">
 
-<button (click)="login()">Login</button>
+    <h2>Login</h2>
 
-<a routerLink="/register">Register</a>
+    <input 
+      type="email" 
+      placeholder="Email Address" 
+      [(ngModel)]="user.email"
+    >
+
+    <input 
+      type="password" 
+      placeholder="Password" 
+      [(ngModel)]="user.password"
+    >
+
+    <button type="button" (click)="login()">Login</button>
+
+    <p class="register-link">
+      Don't have an account? 
+      <a routerLink="/register">Register</a>
+    </p>
+
+  </div>
+
+</div>

@@ -1,0 +1,134 @@
+.dashboard-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  background: linear-gradient(135deg, #43cea2, #185a9d); /* professional blue-green gradient */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboard-card {
+  background: #ffffff;
+  padding: 30px 25px;
+  width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.dashboard-card h2 {
+  margin-bottom: 25px;
+  color: #333;
+  text-align: center;
+}
+
+/* Form inputs */
+.form-group input {
+  width: 48%;
+  margin: 5px 1%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #43cea2;
+  box-shadow: 0 0 5px rgba(67, 206, 162, 0.5);
+}
+
+/* Buttons */
+.form-buttons {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.form-buttons button {
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.form-buttons button:first-child {
+  background: #43cea2;
+  color: white;
+}
+
+.form-buttons button:first-child:hover {
+  background: #36b689;
+  transform: translateY(-2px);
+}
+
+.form-buttons button:nth-child(2) {
+  background: #185a9d;
+  color: white;
+}
+
+.form-buttons button:nth-child(2):hover {
+  background: #124270;
+  transform: translateY(-2px);
+}
+
+/* Employee Table */
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.employee-table th, .employee-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.employee-table th {
+  background: #43cea2;
+  color: white;
+  font-weight: 600;
+}
+
+.employee-table tr:hover {
+  background: #f1f1f1;
+}
+
+/* Action Buttons */
+.edit-btn {
+  background: #f0ad4e;
+  color: white;
+  border-radius: 6px;
+  padding: 5px 10px;
+  margin: 2px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.edit-btn:hover {
+  background: #ec971f;
+}
+
+.delete-btn {
+  background: #d9534f;
+  color: white;
+  border-radius: 6px;
+  padding: 5px 10px;
+  margin: 2px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.delete-btn:hover {
+  background: #c9302c;
+}
