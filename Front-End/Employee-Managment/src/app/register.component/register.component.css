@@ -1,4 +1,4 @@
-/* Full-page gradient background */
+
 .register-page {
   height: 100vh;
   display: flex;
@@ -8,7 +8,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Card container */
+
 .register-card {
   background: #ffffff;
   padding: 40px 30px;
@@ -30,7 +30,7 @@
   font-weight: 600;
 }
 
-/* Inputs */
+
 .register-card input {
   width: 100%;
   padding: 12px;
@@ -47,7 +47,6 @@
   box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
 }
 
-/* Button */
 .register-card button {
   width: 100%;
   padding: 12px;
@@ -65,7 +64,7 @@
   transform: translateY(-2px);
 }
 
-/* Login link */
+
 .login-link {
   margin-top: 20px;
   font-size: 14px;
