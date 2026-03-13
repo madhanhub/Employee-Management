@@ -10,14 +10,23 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  getToken(){
-    return localStorage.getItem("token");
+  getToken() : string | null{
+    if (typeof window !=='undefined' && window.localStorage){
+    return localStorage.getItem("token");}
+    return null
   }
 
+
   getHeaders(){
+    const token=this.getToken()
+if(!token){
+ console.error('Token missing')
+  
+}
+
     return {
       headers: new HttpHeaders({
-        'Authorization': 'Bearer ' + this.getToken()
+        Authorization: `Bearer ${token ?? ''}`
       })
     }
   }

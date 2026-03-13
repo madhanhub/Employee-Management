@@ -10,7 +10,7 @@ import { ApiService } from '../services/api';
 })
 export class LoginComponent {
 
-  user:any={};
+ user:any={};
 
   constructor(private api:ApiService){}
 
@@ -18,10 +18,17 @@ export class LoginComponent {
 
     this.api.login(this.user).subscribe((res:any)=>{
 
-      localStorage.setItem("token",res.user_token);
+      console.log("Login responce ",res);
+      
+      const token =res.user_token || res.token
+
+      if(token){
+      localStorage.setItem("token",token);
 
       alert("Login Success");
-
+}else{
+  alert('Token not received from server')
+}
     })
   }
 

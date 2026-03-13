@@ -9,7 +9,7 @@ app.post('/api/employee',authorization,async(req,res)=>{
         const {name,email,department,salary}=req.body
         const register_emplyee=await employecontrollers.employee_register({UserId},{
             name,email,department,salary
-        })
+        }).save()
         res.status(200).json({message:'new employee added',data:register_emplyee})
     }catch(error){
         res.status(500).json({message:'Employee not added'})
