@@ -65,6 +65,5 @@ Registeration Page : <img width="1897" height="876" alt="image" src="https://git
 Login Page : <img width="1896" height="867" alt="image" src="https://github.com/user-attachments/assets/2f5368e0-eadd-4ce3-a1c3-5096d06a135f" />
 
 
-Employee Registration Page : <img width="1907" height="879" alt="image" src="https://github.com/user-attachments/assets/e4268127-18b8-413f-a56f-de2d88c808b4" />
 
 Postman Collections : https://red-escape-917141.postman.co/workspace/post-trainning~fca6f7c7-dffa-4f5c-b9be-a5dc8b189aa6/collection/32559089-e362f7b6-9362-4e82-98d8-fb27299f32a2?action=share&source=copy-link&creator=32559089
